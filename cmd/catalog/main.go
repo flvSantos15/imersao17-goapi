@@ -10,6 +10,7 @@ import (
 	"github.com/flvsantos15/imersao17/goapi/internal/webserver"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
+	// _ "github.com/go-sql-driver/mysql"
 )
 
 func main() {
