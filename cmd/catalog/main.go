@@ -9,6 +9,7 @@ import (
 	"github.com/flvsantos15/imersao17/goapi/internal/services"
 	"github.com/flvsantos15/imersao17/goapi/internal/webserver"
 	"github.com/go-chi/chi/v5"
+	"github.com/go-chi/chi/v5/middleware"
 )
 
 func main() {
@@ -28,6 +29,8 @@ func main() {
 	webProductHandler := webserver.NewProductHandler(productService)
 
 	c := chi.NewRouter()
+	c.Use(middleware.Logger)
+	c.Use(middleware.Recoverer)
 	c.Get("/category/{id}", webCategoryHandler.GetCategory)
 	c.Get("/category", webCategoryHandler.GetCategories)
 	c.Post("/category", webCategoryHandler.CreateCategory)
