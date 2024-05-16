@@ -69,5 +69,3 @@ func (pd *ProductDB) CreateProduct(product *entity.Product) (*entity.Product, er
 	}
 	return product, nil
 }
-
-// parei no 1:06:33
