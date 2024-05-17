@@ -10,7 +10,7 @@ import (
 	"github.com/flvsantos15/imersao17/goapi/internal/webserver"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
-	// _ "github.com/go-sql-driver/mysql"
+	_ "github.com/go-sql-driver/mysql"
 )
 
 func main() {
@@ -38,7 +38,7 @@ func main() {
 
 	c.Get("/product/{id}", webProductHandler.GetProduct)
 	c.Get("/product", webProductHandler.GetProducts)
-	c.Get("product/category/{categoryID}", webProductHandler.GetProductByCategoryID)
+	c.Get("/product/category/{categoryID}", webProductHandler.GetProductByCategoryID)
 	c.Post("/product", webProductHandler.CreateProduct)
 
 	fmt.Println("Server is running on port 8080")
