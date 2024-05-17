@@ -1,0 +1,46 @@
+POST http://localhost:8080/category HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "name": "clothes",
+  "description": "clothes in general"
+}
+
+###
+GET http://localhost:8080/category/0d28c718-01f1-4a27-a828-703dba8c33cd HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+###
+GET http://localhost:8080/category HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+###
+POST http://localhost:8080/product HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "name": "pizza",
+  "description": "napolitano",
+  "price": 40,
+  "image_url": "http://www.google.com",
+  "category_id": "0d28c718-01f1-4a27-a828-703dba8c33cd"
+}
+
+###
+GET http://localhost:8080/product HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+###
+GET http://localhost:8080/product/3a6f1b14-4e2e-42da-ab23-32e76c17c9f6 HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+###
+GET http://localhost:8080/product/category/0d28c718-01f1-4a27-a828-703dba8c33cd HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json

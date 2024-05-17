@@ -41,7 +41,7 @@ func (wph *WebProductHandler) GetProduct(w http.ResponseWriter, r *http.Request)
 }
 
 func (wph *WebProductHandler) GetProductByCategoryID(w http.ResponseWriter, r *http.Request) {
-	categoryID := chi.URLParam(r, "categoryId")
+	categoryID := chi.URLParam(r, "categoryID")
 	if categoryID == "" {
 		http.Error(w, "categoryID is required", http.StatusBadRequest)
 		return

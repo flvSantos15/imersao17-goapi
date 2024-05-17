@@ -7,10 +7,9 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: test
-      MYSQL_USER: test
-      MYSQL_PASSWORD: test
+      MYSQL_DATABASE: imersao17
+      MYSQL_PASSWORD: root
     ports:
-      -3306:3306
+      - 3306:3306
     volumes:
       - .docker/mysql:/var/lib/mysql
